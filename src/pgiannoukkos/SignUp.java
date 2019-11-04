@@ -7,9 +7,9 @@ import javax.servlet.*;
 
 public class SignUp extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("uname");
+		String uname = request.getParameter("uname").toLowerCase();
 		String password = request.getParameter("password");
-		String email = request.getParameter("email");
+		String email = request.getParameter("email").toLowerCase();
 
 		try {
 			Connection c = ConnectionProvider.getCon();

@@ -9,7 +9,7 @@ import java.sql.*;
 
 public class LogIn extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uname = request.getParameter("uname");
+		String uname = request.getParameter("uname").toLowerCase();
 		String password = request.getParameter("password");
 
 		try {
